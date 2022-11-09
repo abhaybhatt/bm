@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import UserModal from './components/modal/userModal/userModal.js';
+import BillModal from './components/modal/userModal/addBillModal.js';
+import Navbar from './components/navbar/Navbar.js';
+import Sidebar from './components/sidebar/Sidebar.js';
+import Main from './components/main/Main.js';
+import { useSelector } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
 
-function App() {
+const App = () =>{
+  const name = useSelector(state => state.user.name)
+  const[sidebar, setSidebar] = useState(false);
+  const[modal, setModal] = useState("")
+  const[page, setPage] = useState('bills')
+
+  useEffect(() => {
+    if(name === ""){
+      setModal("user")
+    }else{
+      setModal("")
+    }
+  },[name])
+
+  const openSidebar = () =>{
+    setSidebar(true);
+  }
+
+  const loadModals = () => {
+    if(modal === "user"){
+      return (<UserModal />)
+    }
+    else if(modal === "bill"){
+      return (<BillModal setModal={setModal} />)
+    }
+  }
+
+  const closeSidebar = () =>{
+    setSidebar(false);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Toaster />
+      {loadModals()}
+      <Navbar sidebar={sidebar} openSidebar={openSidebar} setPage={setPage} page={page}/>
+      <Main setModal={setModal} page={page} />
+      {/* <Sidebar sidebar={sidebar} closeSidebar={closeSidebar} /> */}
     </div>
   );
 }

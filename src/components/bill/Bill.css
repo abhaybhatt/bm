@@ -1,0 +1,83 @@
+.bill-div {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 100px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bill-status {
+    width: 30px;
+    height: 30px;
+}
+
+.bill-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.bill-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill-description {
+    color: #1a3b5c;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bill-category {
+    text-transform: capitalize;
+    color: #2d6eae;
+    font-size: 16px;
+}
+
+.bill-date {
+    font-size: 12px;
+    color: #616263;
+}
+
+.bill-update {
+    color: #1a3b5c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bill-status-change1 {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+    background: #d2f9ee;
+    color: #38e1b0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.bill-status-change2 {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    background: #fddcdf;
+    color: #f65a6f;
+    text-align: center;
+}
+
+.bill-trash {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}

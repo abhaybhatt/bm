@@ -1,0 +1,90 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-heading {
+    font-size: 32px;
+    color: #2e4a66;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.modal-label {
+    color: #a5aaad;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-input {
+    padding: 0px 3px 0px 3px;
+    margin: 3px 0;
+    width: 50%;
+    min-width: 300px;
+    outline: none;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+}
+
+.modal-input:focus,
+.modal-input:active {
+    border-color: transparent;
+    border-bottom: 2px solid #1c87c9;
+}
+
+.modal-button {
+    transition: 0.3s linear;
+    margin: 12px 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 155px;
+    background-color: #ffc42c;
+    color: #3f3f3f;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: auto;
+}
